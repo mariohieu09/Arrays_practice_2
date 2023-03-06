@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="display">
+<!--<input type="button" value="Nhập độ dài" onclick="do_dai()"/>-->
+<input type="button" value="Nhập phần tử" onclick="add()" />
+<input type="button" value="Display" onclick="display()"/><br><br>
+<div id="res"></div>
+<script>
+    let arr = [];
+    let x =0;
+    let len = parseInt(prompt("Nhập độ dài của mảng: "));
+    arr.length = len;
+    function add() {
+        arr[x] = parseInt(document.getElementById("display").value);
+        x++;
+        document.getElementById("display").value = "";
+        if (x == arr.length) {
+            alert("Done");
+        }
+    }
+    function display(){
+        document.getElementById("res").innerHTML = arr + "<br>" + "Mảng có " + arr.length + " phần tử"
+    }
+</script>
+</body>
+</html>

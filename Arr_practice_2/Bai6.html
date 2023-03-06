@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let x = [prompt("Enter the string")];
+    y = x.toString();
+    z = []
+
+    for(i = 0; i <y.length; i++){
+      z.push(y[i])
+      console.log(z)
+      }
+  if(z.indexOf("-") !== -1){
+    z.splice(z.indexOf("-"), 1, "_");
+  }
+
+    document.write(z)
+
+</script>
+</body>
+</html>
